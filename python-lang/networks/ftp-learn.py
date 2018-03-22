@@ -1,0 +1,21 @@
+import socket
+import time
+
+s = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+s.connect(('localhost',21))
+print s.recv(1024)
+s.send("USER jeffrin"+"\r\n")
+print s.recv(1024)
+s.send("PASS unix"+"\r\n")
+print s.recv(1024)
+s.send("PWD"+"\r\n")
+print s.recv(1024)
+s.send("MKD ftp"+"\r\n")
+print s.recv(1024)
+s.send("LIST"+"\r\n")
+print s.recv(1024)
+s.send("STAT"+"\r\n")
+print s.recv(1024)
+s.send("QUIT"+"\r\n")
+print s.recv(1024)
+s.close()

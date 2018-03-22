@@ -1,0 +1,2 @@
+Enclosing characters quote in single quotes quote preserves
+the literal value of each character within the quotes.

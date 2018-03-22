@@ -1,0 +1,27 @@
+First we write the array version.
+
+int length(char string[]) {
+int n = 0;
+while (string[n] != '\0') n++;
+return n;
+}
+
+Now we write the pointer version.
+
+int length(char *strPtr) { // string pointer
+int n = 0;
+while (*strPtr != '\0') {
+n++;
+strPtr++;
+}
+return n;
+}
+
+We could even increment strPtr as part of the while test, giving the following:
+
+int length(char *strPtr) {
+int n = 0;
+while (*strPtr++ != '\0') n++;
+return n;
+}
+
